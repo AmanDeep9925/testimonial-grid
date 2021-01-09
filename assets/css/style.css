@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap");
+
+* {
+    box-sizing: border-box;
+    font: inherit;
+    color: inherit;
+}
+
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    max-width: 600px;
+    margin: 0;
+}
+
+#container {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    grid-gap: 20px;
+}
+
+.grid--item {
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 30px -10px rgba(0, 0, 0);
+}
+
+.grid--item header {
+    display: inline-flex;
+    width: 100%;
+}
+
+.grid--item--one {
+    grid-column: 1 / span 2;
+}
+
+.grid--item--five {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 2;
+}
+
+.grid--item--four {
+    grid-column: 2 / span 2;
+}
+
+.user--image img {
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.user--info {
+    padding: 7px;
+}
+
+.user--info .user--name {
+    margin: 5px 0;
+}
+
+.user--info .user--schooling {
+    opacity: 50%;
+    font-size: 12px;
+}
+
+article {
+    padding: 20px 10px;
+}
+
+.about--bootcamp {
+    padding: 10px 0px;
+    font-size: 1.5rem;
+}
+
+.review {
+    opacity: 70%;
+    padding: 10px 0px;
+}
+
+.dark--text {
+    color: hsl(219, 29%, 14%);
+}
+
+.light--text {
+    color: hsl(0, 0%, 100%);
+}
+
+#testimonials1 {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(../../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: center 50px;
+}
+
+#testimonials2 {
+    background-color: hsl(217, 19%, 35%);
+}
+
+#testimonials3 {
+    background-color: hsl(0, 0%, 100%);
+}
+
+#testimonials4 {
+    background-color: hsl(219, 29%, 14%);
+}
+
+#testimonials5 {
+    background-color: hsl(0, 0%, 100%);
+}
+
+@media only screen and (max-width: 1200px) {
+    #container {
+        margin: auto 10%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 33%);
+    }
+
+    .grid--item--one {
+        grid-column: unset;
+        grid-row: unset;
+    }
+
+    .grid--item--two {
+        grid-column: unset;
+        grid-row: unset;
+    }
+
+    .grid--item--three {
+        grid-column: unset;
+        grid-row: unset;
+    }
+
+    .grid--item--five {
+        grid-column: unset;
+        grid-row: unset;
+    }
+
+    .grid--item--four {
+        grid-column: unset;
+        grid-row: unset;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        overflow: auto;
+    }
+
+    #container {
+        margin: auto 40px;
+    }
+
+    .grid {
+        grid-template-columns: none;
+        grid-template-rows: 1fr;
+    }
+
+    .grid--item--one {
+        grid-row: unset;
+        grid-column: unset;
+    }
+
+    .grid--item--five {
+        grid-row: unset;
+        grid-column: unset;
+    }
+
+    .grid--item--four {
+        grid-row: unset;
+        grid-column: unset;
+    }
+}
